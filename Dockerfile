@@ -7,4 +7,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-CMD ["python", "weather_service.py"]
+# Make entrypoint executable
+RUN chmod +x entrypoint.sh
+
+# Use entrypoint to ensure errors.log is a file
+ENTRYPOINT ["./entrypoint.sh"]
