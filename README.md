@@ -5,14 +5,17 @@
 ## Структура проекта
 
 ```
-├── weather_service.py    # Основной скрипт сервиса
-├── database.py           # Модуль работы с БД
-├── config.py             # Конфигурация
-├── requirements.txt      # Зависимости Python
-├── docker-compose.yml    # Docker Compose конфигурация
-├── Dockerfile           # Docker образ
-├── .env.example         # Пример переменных окружения
-└── README.md            # Документация
+├── weather_service.py      # Основной скрипт сервиса получения данных о погоде
+├── database.py             # Модуль работы с PostgreSQL БД
+├── config.py               # Конфигурация приложения
+├── requirements.txt        # Зависимости Python
+├── docker-compose.yml      # Docker Compose конфигурация с сервисами
+├── Dockerfile              # Docker образ для контейнеризации приложения
+├── entrypoint.sh           # Скрипт входной точки для контейнера
+├── .env.example            # Пример файла переменных окружения
+├── .gitignore              # Файл игнорирования Git
+├── errors.log              # Логи ошибок (создается при запуске)
+└── README.md               # Документация проекта
 ```
 
 ## Структура базы данных
